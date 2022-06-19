@@ -70,9 +70,43 @@ for (let i = 1; i <= secondArray.lenght; i++) {
 console.log(secondArray);
 
 
+/*
+3. Создайте объект student1 со свойствами firstName, lastName и mark;
+Скопируйте объект student1 в новый объект student2 с помощью spread оператора ( ... ) и измените значение mark;
+Скопируйте объект student1 в новый объект student3 с помощью Object.assign() и измените значение mark;
+Посчитайте среднюю оценку по группе (тоесть между 3я новыми объектами)
+
+Просто получить значения свойства mark у каждого студента через точку или []
+
+Выведите полученные результаты в консоль.
+
+Отобразите все ключи и значения объекта student1 в виде:
+
+ключ - значение
+
+ключ - значение
+
+Используя цыкл
+*/
+
+const student1 = {
+    firstName: 'Vasya',
+    lastName: 'Pupkin',
+    mark: 5,
+};
+
+const student2 = {
+    ...student1,
+    mark: 4,
+};
+
+const student3 = Object.assign({}, student1, {mark: 3});
+
+const averageMark = (student1.mark + student2['mark'] + student3.mark) / 3;
+
+console.log(averageMark);
 
 
-
-
-
-
+for (key in student1) {
+    console.log(`${key} - ${student1[key]}`);
+}
