@@ -17,3 +17,22 @@ null
 
 */
 
+const array = [
+    '455',
+    87.15,
+    true,
+    undefined,
+    7,
+    null,
+    'false',
+    [],
+    {},
+];
+
+array.forEach((el)=>{
+    if (typeof el === 'number') {
+        console.log(typeof el, el + 3);
+    } else {
+        console.log(typeof el);
+    }
+});
